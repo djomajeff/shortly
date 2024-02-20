@@ -1,10 +1,10 @@
 name: shortly
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: ">=3.2.3 <4.0.0"
 
 dependencies:
   dio: ^5.4.1
@@ -13,16 +13,27 @@ dependencies:
     sdk: flutter
   flutter_secure_storage: ^9.0.0
   font_awesome_flutter: ^10.7.0
+  flutter_native_splash: ^2.3.10
   flutter_svg: ^2.0.9
   flutter_bloc: ^8.1.4
   bloc: ^8.1.3
-  share_plus: ^7.2.2
-
+  url_launcher: ^6.2.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  image_path: assets/images/logo.png
+
+flutter_native_splash:
+  image: assets/images/logo.png
+  color: "#FFFFFF"
+  android: true
+  web: false
 
 flutter:
   uses-material-design: true
@@ -30,7 +41,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
-  
+
   fonts:
     - family: Poppins
       fonts:

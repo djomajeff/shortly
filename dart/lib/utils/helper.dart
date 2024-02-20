@@ -9,6 +9,10 @@ extension XSnackbarType on SnackbarType {
   bool get isError => this == SnackbarType.error;
 }
 
+final deviceSize = MediaQueryData.fromView(
+  WidgetsBinding.instance.platformDispatcher.views.first,
+).size;
+
 void showCustomSnackBar(
   BuildContext context,
   String message, {

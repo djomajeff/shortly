@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget renderRoundedBox({
   Widget? child,
-  Color backgroundColor = Colors.black26,
+  Color? backgroundColor,
   Size? size,
   double radius = 12,
   EdgeInsets? padding,

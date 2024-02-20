@@ -17,7 +17,7 @@ class AppColors {
 
 class _TextTheme {
   static TextStyle get headerH1 => const TextStyle(
-        fontSize: 28,
+        fontSize: 30,
         fontWeight: FontWeight.bold,
       );
 
