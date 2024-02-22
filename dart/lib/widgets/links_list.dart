@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shortly/logic/cubit/link_cubit.dart';
 import '../utils/utils.dart';
 import 'widgets.dart';
 
@@ -8,29 +10,21 @@ class LinksList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final links = [
-      {
-        'o': 'https://api.flutter.dev/flutter/painting/HSLColor-class.html',
-        's': 'https://api.flutter.dev/flutter/'
+    return BlocBuilder<LinkCubit, LinkState>(
+      buildWhen: (previous, current) => previous.links != current.links,
+      builder: (context, state) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: state.links.reversed
+              .map(
+                (link) => _LinkItem(
+                  originalUrl: link.original,
+                  shortenUrl: link.shorten,
+                ),
+              )
+              .toList(),
+        );
       },
-      {
-        'o': 'https://api.flutter.dev/flutter/painting/HSLColor-class.html',
-        's': 'https://api.flutter.dev/flutter/'
-      },
-      {
-        'o': 'https://api.flutter.dev/flutter/painting/HSLColor-class.html',
-        's': 'https://api.flutter.dev/flutter/'
-      }
-    ];
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: links
-          .map((link) => _LinkItem(
-                originalUrl: link['o']!,
-                shortenUrl: link['s']!,
-              ))
-          .toList(),
     );
   }
 }
@@ -106,12 +100,7 @@ class _LinkItemState extends State<_LinkItem> {
             overflow: TextOverflow.ellipsis,
           ),
           _isCopying
-              ? Container(
-                  alignment: Alignment.center,
-                  width: 22,
-                  height: 22,
-                  child: const CircularProgressIndicator(),
-                )
+              ? renderSizedLoadingIndicator(size: 25)
               : MyElevatedButton(
                   label: _copiedUrl ? 'Copied!' : 'Copy',
                   labelStyle:

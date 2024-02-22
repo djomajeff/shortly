@@ -3,6 +3,15 @@ import './utils.dart';
 
 enum SnackbarType { error, success, info }
 
+enum Status { loading, success, failure, init }
+
+extension XStatus on Status {
+  bool get isLoading => this == Status.loading;
+  bool get isSuccess => this == Status.success;
+  bool get isFailure => this == Status.failure;
+  bool get isInitial => this == Status.init;
+}
+
 extension XSnackbarType on SnackbarType {
   bool get isInfo => this == SnackbarType.info;
   bool get isSuccess => this == SnackbarType.success;

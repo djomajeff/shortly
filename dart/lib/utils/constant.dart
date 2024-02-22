@@ -8,3 +8,5 @@ const kBgBoostImage = 'assets/images/bg-boost.svg';
 const kbgShortenImage = 'assets/images/bg-shorten.svg';
 const kIllustrationWorkingImage = 'assets/images/illustration-working.svg';
 const kLogoImage = 'assets/images/logo.svg';
+
+const kLocalLinks = 'local-links-key';
