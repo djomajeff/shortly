@@ -11,8 +11,8 @@ class LinkModel extends Equatable {
   });
 
   LinkModel.fromJson(Map<String, dynamic> json) {
-    original = json['original'];
-    shorten = json['shorten'];
+    original = json['original'] ?? '';
+    shorten = json['shorten'] ?? '';
   }
 
   Map<String, dynamic> toJson() {

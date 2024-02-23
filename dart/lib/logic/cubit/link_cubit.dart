@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import 'package:shortly/models/link.dart';
 import 'package:shortly/repositories/link_repository.dart';
@@ -65,12 +66,10 @@ class LinkCubit extends Cubit<LinkState> {
     } catch (e) {
       emit(state.copyWith(
         shortenLinkStatus: Status.failure,
-        errorMessage: e.toString(),
+        errorMessage: e is DioException
+            ? (e.message ?? 'Failed to shorten link')
+            : e.toString(),
       ));
     }
-  }
-
-  void updateEnteredLink(String value) {
-    emit(state.copyWith(enteredLink: value));
   }
 }
