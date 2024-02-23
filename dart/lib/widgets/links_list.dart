@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:shortly/logic/cubit/link_cubit.dart';
 import '../utils/utils.dart';
 import 'widgets.dart';
@@ -91,13 +92,16 @@ class _LinkItemState extends State<_LinkItem> {
             margin: const EdgeInsets.symmetric(vertical: 8),
             width: double.maxFinite,
           ),
-          Text(
-            widget.shortenUrl,
-            style: textTheme.bodyLarge!.copyWith(
-              color: AppColors.primary,
-              fontSize: 15,
+          GestureDetector(
+            onTap: () => launchUrl(Uri.parse(widget.shortenUrl)),
+            child: Text(
+              widget.shortenUrl,
+              style: textTheme.bodyLarge!.copyWith(
+                color: AppColors.primary,
+                fontSize: 15,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
-            overflow: TextOverflow.ellipsis,
           ),
           _isCopying
               ? renderSizedLoadingIndicator(size: 25)
