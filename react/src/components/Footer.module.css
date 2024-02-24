@@ -1,0 +1,66 @@
+.footer {
+  background-color: var(--color-dark-100);
+  padding: 5rem 7rem;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 10%;
+    gap: 1rem;
+  }
+}
+
+.footer h2 {
+  font-size: 17px;
+  margin: 0 0 .5rem;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer ul {
+    text-align: center;
+  }
+}
+
+.footer ul h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer a {
+  display: block;
+  font-size: 12px;
+  color: var(--color-gray-200);
+}
+
+.footer a.active, .footer a:hover  {
+  color: var(--color-primary-100);
+}
+
+.icon {
+  margin: .5rem;
+}
+
+.icon:hover {
+  color: var(--color-primary-100);
+  cursor: pointer;
+}
+
+.footer .actions {
+  display: flex;
+  gap: 1rem;
+}
+
+
+ 

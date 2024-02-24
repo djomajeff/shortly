@@ -1,0 +1,54 @@
+.menu {
+  margin: 0;
+  padding: 2rem;
+  position: fixed;
+  top: 10vh;
+  left: 10%;
+  width: 80%;
+  max-height: 80vh;
+  background: var(--color-primary-200);
+  border: none;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  animation: slide-right-fade-in 300ms ease-out forwards;
+}
+
+.menu::backdrop {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu hr {
+  width: 80%;
+  height: 1px;
+  color: var(--color-gray-100);
+}
+
+.menu a,
+.menu p {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+@keyframes slide-right-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

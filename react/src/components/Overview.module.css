@@ -1,0 +1,52 @@
+.overview {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 7rem;
+  padding-bottom: 7rem;
+}
+
+.overview img {
+  width: 50%;
+}
+
+.description {
+  width: 40%;
+  text-align: left;
+}
+
+.description h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-dark-100);
+}
+
+.description p {
+  font-size: 15px;
+  color: var(--color-gray-200);
+  margin-top: 1rem 0;
+}
+
+.description button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: .7rem 1.75rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .overview {
+    justify-content: center;
+    margin: 2rem 10%;
+    text-align: center;
+  }
+
+  .overview img {
+    display: none;
+  }
+
+  .description {
+    width: 80%;
+    text-align: center;
+  }
+}

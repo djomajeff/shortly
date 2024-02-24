@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { LinkModel } from "../models/link.model";
 import { LOCAL_KEY, apiKey } from "./constant";
 

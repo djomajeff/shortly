@@ -1,0 +1,18 @@
+.boostLink {
+  background-color: var(--color-primary-200);
+  padding: 5rem 0;
+  background-image: url('../assets/bg-boost.svg');
+  background-position: center;
+  background-size: cover;
+ }
+
+.boostLink h2 {
+  color: white;
+  font-size: 28px;
+}
+
+.boostLink button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: .7rem 1.75rem;
+}

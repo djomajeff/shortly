@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 7rem;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.list h2 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.list a {
+  font-size: 12px;
+  color: var(--color-gray-200);
+}
+
+.list a:hover,
+.list a.active {
+  color: var(--color-dark-100);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.text-button {
+  background-color: transparent;
+  color: var(--color-gray-200);
+  font-weight: 500;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header {
+    margin: auto 10%;
+  }
+
+  nav,
+  .actions {
+    display: none;
+  }
+
+  .header img {
+    width: 40%;
+    max-width: 7rem;
+    height: 2rem;
+  }
+}
