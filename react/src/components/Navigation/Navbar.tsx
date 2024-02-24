@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import classes from "./Navbar.module.css";
-import { logoImage } from "../utils/images";
+import { logoImage } from "../../utils/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { leadingNavItems } from "../utils/constant";
+import { leadingNavItems } from "../../utils/constant";
 import { useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 

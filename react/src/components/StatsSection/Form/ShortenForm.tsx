@@ -1,8 +1,8 @@
 import { forwardRef, useContext, useRef, useState } from "react";
 import classes from "./ShortenForm.module.css";
 import { useMutation } from "@tanstack/react-query";
-import { LinkContext } from "../store/link-context";
-import { Repository } from "../utils/repository";
+import { LinkContext } from "../../../store/link-context";
+import { Repository } from "../../../utils/repository";
 
 const ShortenForm = forwardRef<HTMLFormElement>((_, ref) => {
   const linkContext = useContext(LinkContext);

@@ -1,9 +1,13 @@
 import { forwardRef, useContext } from "react";
-import { brandImage, detailedImage, fullyCustomImage } from "../utils/images";
+import {
+  brandImage,
+  detailedImage,
+  fullyCustomImage,
+} from "../../utils/images";
 import classes from "./Statistics.module.css";
-import { LinkContext } from "../store/link-context";
-import ShortenForm from "./ShortenForm";
-import ShortenItem from "./ShortenItem";
+import { LinkContext } from "../../store/link-context";
+import ShortenForm from "./Form/ShortenForm";
+import ShortenItem from "./ShortenItem/ShortenItem";
 
 const Statistics = forwardRef<HTMLFormElement>((_, ref) => {
   const linkContext = useContext(LinkContext);

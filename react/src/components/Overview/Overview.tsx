@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { illustrationWorkingImage } from "../utils/images";
+import { illustrationWorkingImage } from "../../utils/images";
 import classes from "./Overview.module.css";
 
 const Overview: FC<{ onAnimateToForm: VoidFunction }> = (props) => {

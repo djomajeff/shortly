@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import classes from "./ShortenItem.module.css";
-import { LinkModel } from "../models/link.model";
+import { LinkModel } from "../../../models/link.model";
 
 const ShortenItem: FC<{ link: LinkModel }> = ({ link }) => {
   const [isCopied, setIsCopied] = useState(false);

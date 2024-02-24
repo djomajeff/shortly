@@ -1,7 +1,7 @@
-import Overview from "../components/Overview";
-import Statistics from "../components/Statistics";
+import Overview from "../components/Overview/Overview";
+import Statistics from "../components/StatsSection/Statistics";
 import BoostLink from "../components/BoostLink";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import { useRef } from "react";
 
 export const HomePage = () => {
