@@ -37,10 +37,17 @@
   font-weight: 500;
 }
 
+.visibility {
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   .header {
     margin: auto 10%;
+  }
+
+  .visibility {
+    display: block;
   }
 
   nav,

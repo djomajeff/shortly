@@ -45,11 +45,12 @@ const Navbar = () => {
         </div>
       </>
       <>
-        <img src={logoImage} alt="Logo image" />
+        <img src={logoImage} alt="Logo image" className={classes.visibility} />
         <FontAwesomeIcon
           icon={faBars}
           size="2x"
           color="gray"
+          className={classes.visibility}
           onClick={handleOpenMenu}
         />
       </>
